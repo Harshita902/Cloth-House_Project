@@ -1,0 +1,85 @@
+
+	<div class="bg-img">
+	<div class="container" >
+		<div class="row">
+		<div class="col-md-3">
+					
+		</div>
+				
+		<div class="col-md-6 main">
+					
+			<form action="/sign_up" method="post" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+					
+			<h1>Your Feedback</h1>
+							
+      <input type="text" placeholder="Enter Your Name" ngModel #fname="ngModel" pattern="^[A-Z][a-z]*$" required class="form-control" name="fname"/>
+                    
+      <div *ngIf="(fname.touched || !fname.valid)">
+        <div *ngIf="fname.errors?.['pattern']" class="text-white">
+            First letter of name must be capital
+        </div>
+      </div>
+      <div *ngIf="(fname.touched || !fname.valid)">
+        <span class="text-white" *ngIf="fname.touched && fname.errors?.['required']">
+            name is required
+        </span>
+</div>
+							
+<input type="text" placeholder="Enter Your Email"  class="form-control" pattern="(^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$)" required  ngModel #email="ngModel" name="email"/>
+<div *ngIf="email.touched && !email.valid">
+  <div *ngIf="email.errors?.['required']" class="text-white">
+        E-mail Id is required
+  </div> 
+     
+     <div *ngIf="email.errors?.['pattern']" class="text-white">
+        Invalid Email Id
+  </div>
+</div>
+
+<input type="text" placeholder="Enter Your Number" class="form-control" pattern="(^((\\+91-?)|0)?[0-9]{10}$)" required ngModel #phone="ngModel" name="phone"/>
+
+<div *ngIf="phone.touched && !phone.valid">
+  <div *ngIf="phone.errors?.['required']" class="text-white">
+         phone number is required
+  </div>
+     
+     <div *ngIf="phone.errors?.['pattern']" class="text-white">
+        phone number should be 10 digits
+  </div>
+</div>
+
+<textarea placeholder="your feedback" ngModel #fname="ngModel" pattern="^[A-Z][a-z]*$" required class="form-control" name="fname"></textarea>
+                    
+                    
+<div *ngIf="(fname.touched || !fname.valid)">
+  <div *ngIf="fname.errors?.['pattern']" class="text-white">
+      only alphabets
+  </div>
+</div>
+
+<div *ngIf="(fname.touched || !fname.valid)">
+      <span class="text-white" *ngIf="fname.touched && fname.errors?.['required']">
+          feedback is required
+      </span>
+</div>
+
+		
+			<input type="submit" id="submitDetails"
+			name="submitDetails" value="Submit" [disabled]="!contactForm.valid" /><br>
+					
+			</form>
+					
+		</div>
+				
+				
+		<div class="col-md-3">
+		</div>
+				
+	</div>
+	</div>
+</div> 
+
+
+
+
+

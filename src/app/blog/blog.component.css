@@ -1,0 +1,10 @@
+.img{
+    animation: sample;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes sample{
+    from{border-radius:0%;}
+    to{border-radius:50%}
+}

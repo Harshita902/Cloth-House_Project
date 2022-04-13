@@ -1,0 +1,20 @@
+
+<div class="container">
+    <h1 class="text-center">All Products</h1>
+    <div class="row">
+        <div class="col-md-4 col-sm-12 d-flex align-items-stretch" *ngFor="let n of newsData">
+            <div class="card m-3" style="width: 18rem;">
+                <img src={{n.image}} class="card-img-top d-fl" alt="..." width="300px" height="300px">
+                <div class="card-body">
+                  <h5 class="card-title">{{n.title}}</h5>
+                  <p class="card-title"><strong>Price:</strong><i class="fa fa-rupee">{{n.price}}</i></p>
+                  <a  class="btn btn-danger" (click)=addtocart(n)>Add to cart</a>
+                </div>
+              </div>
+              <br/>
+        </div>
+    </div>
+</div> 
+
+
+

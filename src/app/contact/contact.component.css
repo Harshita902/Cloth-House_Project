@@ -1,0 +1,7 @@
+.bg-img{
+    background-image: url('../../assets/pexels-alex-andrews-821754.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    height:120vh; 
+}

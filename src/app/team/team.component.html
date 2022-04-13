@@ -1,0 +1,106 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 imag">
+           <img src="assets/pexels-alena-darmel-7710140.jpg"/> 
+        </div>
+    </div>
+    </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center">MEET OUR TEAM OF EXPERTS</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center">
+                <img src="assets/team-member-1.png"/>
+                <h5 class="mx-4">SELENE LEWI</h5>
+                <p class="mx-5">DESIGNER</p>
+                <a href="https://www.facebook.com"><i class="fa fa-facebook-f m-4 text-dark"></i></a>
+                <a href="https://www.twitter.com"><i class="fa fa-twitter m-4 text-dark"></i></a>
+                <a href="https://www.linkedin.com"><i class="fa fa-linkedin m-4 text-dark"></i></a>
+
+            </div>
+
+            <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center">
+                <img src="assets/team-member-2.png"/>
+                <h5 class="mx-4">STANLEY CLARK</h5>
+                <p class="mx-5">MANAGER</p>
+                <a href="https://www.facebook.com"><i class="fa fa-facebook-f m-4 text-dark"></i></a>
+                <a href="https://www.twitter.com"><i class="fa fa-twitter m-4 text-dark"></i></a>
+                <a href="https://www.linkedin.com"><i class="fa fa-linkedin m-4 text-dark"></i></a>
+
+            </div>
+
+            <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center">
+                <img src="assets/team-member-3.png"/>
+                <h5 class="mx-4">NANCY MORRIS</h5>
+                <p class="mx-5">PHOTOGRAPHER</p>
+                <a href="https://www.facebook.com"><i class="fa fa-facebook-f m-4 text-dark"></i></a>
+                <a href="https://www.twitter.com"><i class="fa fa-twitter m-4 text-dark"></i></a>
+                <a href="https://www.linkedin.com"><i class="fa fa-linkedin m-4 text-dark"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center">
+            <img src="assets/team-member-4.png"/>
+            <h5>FAYE HARRIS</h5>
+            <p>STYLIST</p>
+            <a href="https://www.facebook.com"><i class="fa fa-facebook-f m-4 text-dark"></i></a>
+                <a href="https://www.twitter.com"><i class="fa fa-twitter m-4 text-dark"></i></a>
+                <a href="https://www.linkedin.com"><i class="fa fa-linkedin m-4 text-dark"></i></a>
+
+        </div>
+
+        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center">
+            <img src="assets/team-member-5.png"/>
+            <h5 class="mx-4">ARTHUR STEVENS</h5>
+            <p class="mx-5">TAILOR</p>
+            <a href="https://www.facebook.com"><i class="fa fa-facebook-f m-4 text-dark"></i></a>
+            <a href="https://www.twitter.com"><i class="fa fa-twitter m-4 text-dark"></i></a>
+            <a href="https://www.linkedin.com"><i class="fa fa-linkedin m-4 text-dark"></i></a>
+        </div>
+
+        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center">
+            <img src="assets/team-member-6.png"/>
+            <h5 class="mx-4">ELAINE PALMER</h5>
+            <p class="mx-5">TAILOR</p>
+            <a href="https://www.facebook.com"><i class="fa fa-facebook-f m-4 text-dark"></i></a>
+            <a href="https://www.twitter.com"><i class="fa fa-twitter m-4 text-dark"></i></a>
+            <a href="https://www.linkedin.com"><i class="fa fa-linkedin m-4 text-dark"></i></a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<table class="table mt-5">
+    <thead>
+      <tr>
+        <th scope="col">S.no</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Name</th>
+        <th scope="col">Profile</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of products;let i=index">
+        <th scope="row">{{a.Sno}}</th>
+        <td><div *ngIf="show"><img src="{{a.image}}" width="200px" height="200px"/></div></td>
+        <td>{{a.Name}}</td>
+        <td>{{a.profile}}</td>
+    </tbody>
+  </table>
+  <button class="btn btn-success mb-2 " (click)="toogle()">Hide Image Only</button>

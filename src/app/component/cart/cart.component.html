@@ -1,0 +1,64 @@
+<ng-container *ngIf="products.length !=0">
+    <div class="container">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Product Name</th>
+                        <th>Product Image</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let n of products; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{n.title}}</td>
+                        <td><img src="{{n.image}}" width="200px" height="200px" alt=""/></td>
+                        <td style="width: 25%;">{{n.description}}</td>
+                        <td style="width: 12%;"><strong>{{n.price}}</strong></td>
+                        <td style="width: 12%;">{{n.quantity}}</td>
+                        <td style="width: 12%;">{{n.total}}</td>
+                        <td>
+                            <button (click)="removeItem(n)" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td><button class="btn btn-danger" (click)="emptycart()">Empty Cart</button></td>
+                        <td><button class="btn btn-primary" routerLink="/product">Shop Cart</button></td>
+                        <td><button class="btn btn-success">Checkout</button></td>
+                        <td><strong>Grand Total : <i class="fa fa-rupee">{{grandTotal}}</i></strong></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+    </div>
+ </ng-container>
+
+
+
+
+
+<div class="container">
+<div *ngIf="products.length==0">
+<div class="card mx-auto m-5 text-center" style="height: 400px;" >
+    <h3>Cart</h3>
+    <img src="assets/images.png"  style="width: 300px; height: 300px;" class="card-img-top mx-auto m-1" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-center">Add item to it now</h5>
+      <a routerLink="/product" class="btn btn-danger">Shop Now</a>
+    </div>
+  </div>
+</div>
+</div> 

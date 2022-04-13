@@ -1,0 +1,210 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 imag">
+           <img src="assets/1646197920vv.jpg"/> 
+        </div>
+    </div>
+    </div>
+
+<div class="container-fluid">
+
+    <h1 class="text-center">Tops, T-Shirts & Shirts,Jeans & Jeggings</h1>
+    <div class="row">
+<div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;" >
+    <img src={{item.image}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.description}}</p>
+      <h2><strong><i class="fa fa-rupee"></i>{{item.price}}</strong></h2>
+      <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+    </div>
+  </div>
+
+  <!-- <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+    <img src={{item.image1}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Tokyo Talkie</h5>
+      <p class="card-text">Tokyo Talkies Women White Voluminous Sleeve Shirt</p>
+      <h2><strong>{{399|currency:"INR"}}</strong></h2>
+      <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+    <img src={{item.image2}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vishudh</h5>
+      <p class="card-text">Vishudh Women Regular Top</p>
+      <h2><strong>{{458|currency:"INR"}}</strong></h2>
+      <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+    </div>
+     </div>
+
+     <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+        <img src={{item.image3}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tokyo Talkie</h5>
+          <p class="card-text">Tokyo Talkies Women Maroon Knited Top</p>
+          <h2><strong>{{565|currency:"INR"}}</strong></h2>
+          <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="row">
+    <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+        <img src={{item.image4}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tokyo Talkie</h5>
+          <p class="card-text">Tokyo Talkies Women Blue Crop Top</p>
+          <h2><strong>{{458|currency:"INR"}}</strong></h2>
+          <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+        </div>
+      </div>
+    
+      <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+        <img src={{item.image5}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Vishudh</h5>
+          <p class="card-text">Vishudh Women Regular Top</p>
+          <h2><strong>{{500|currency:"INR"}}</strong></h2>
+          <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+        </div>
+      </div>
+    
+      <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+        <img src={{item.image6}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Vishudh</h5>
+          <p class="card-text">Vishudh Women Regular Top</p>
+          <h2><strong>{{600|currency:"INR"}}</strong></h2>
+          <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+        </div>
+         </div>
+    
+         <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+            <img src={{item.image7}} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tokyo Talkie</h5>
+              <p class="card-text">Tokyo Talkies Women Pink Crop Top</p>
+              <h2><strong>{{650|currency:"INR"}}</strong></h2>
+              <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+            </div>
+          </div>
+      </div>
+  </div> -->
+
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col coupan">
+              <img src="assets/1644483997Ketch the CRAZY 1518 x148.jpg" width="100%"/>
+
+          </div>
+
+      </div>
+
+  </div>
+
+
+  <!-- <div class="container-fluid">
+    <div class="row">
+        <h1 class="text-center">Jeans & Jeggings</h1>
+<div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+    <img src={{item.image8}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Tokyo Talkie</h5>
+      <p class="card-text">Tokyo Talkies Women Black Slim Fit Jeans</p>
+      <h2><strong>{{430|currency:"INR"}}</strong></h2>
+      <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+    <img src={{item.image9}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Tokyo Talkie</h5>
+      <p class="card-text">Tokyo Talkies Women Black Slim Fit Jeans</p>
+      <h2><strong>{{450|currency:"INR"}}</strong></h2>
+      <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+    <img src={{item.image10}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Tokyo Talkie</h5>
+      <p class="card-text">Tokyo Talkies Women Vintage Fit Jeans</p>
+      <h2><strong>{{460|currency:"INR"}}</strong></h2>
+      <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+    </div>
+     </div>
+
+     <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+        <img src={{item.image11}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tokyo Talkie</h5>
+          <p class="card-text">Tokyo Talkies Women Mauve Regular Fit Jeans</p>
+          <h2><strong>{{420|currency:"INR"}}</strong></h2>
+          <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="row">
+    <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+        <img src={{item.image12}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tokyo Talkie</h5>
+          <p class="card-text">Tokyo Talkies Women Super Skinny Fit Jeans</p>
+          <h2><strong>{{400|currency:"INR"}}</strong></h2>
+          <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+        </div>
+      </div>
+    
+      <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+        <img src={{item.image13}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tokyo Talkie</h5>
+          <p class="card-text">Tokyo Talkies Women Grey Straight Fit Jeans</p>
+          <h2><strong>{{380|currency:"INR"}}</strong></h2>
+          <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+        </div>
+      </div>
+    
+      <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+        <img src={{item.image14}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tokyo Talkie</h5>
+          <p class="card-text">Tokyo Talkies Women Olive Mom Fit Jeans</p>
+          <h2><strong>{{350|currency:"INR"}}</strong></h2>
+          <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+        </div>
+         </div>
+    
+         <div class="card" style="width: 18rem;"  *ngFor="let item of filterCategory;">
+            <img src={{item.image}} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tokyo Talkie</h5>
+              <p class="card-text">Tokyo Talkies Women Grey Straight Fit Jeans</p>
+              <h2><strong>{{550|currency:"INR"}}</strong></h2>
+              <a (click)=addtocart(item) class="btn btn-danger">Add to cart</a>
+            </div>
+          </div>
+      </div>
+  </div> -->
+
+  <!-- <div class="container">
+    <div class="row">
+        <div class="col" *ngFor="let item of filterCategory;">
+          <div class="card" style="width: 18rem;">
+            <img src={{item.image}} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <a (click)=addtocart(item) class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div> -->

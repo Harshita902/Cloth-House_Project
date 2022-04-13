@@ -1,0 +1,179 @@
+<nav class="navbar  navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand"><img src="assets/logo.png" width="80px"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About Us</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/product">Products</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Women Fashion
+          </a>
+          <ul class="dropdown-menu  bg-light" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" routerLink="/womenproduct">WESTERN WEAR</a></li>
+            <li><a class="dropdown-item" routerLink="/fusionWear">INDIAN & FUSION WEAR</a></li>
+            <li><a class="dropdown-item" routerLink="/sleepWear">LOUNGEWEAR & SLEEPWEAR</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/men">Men Fashion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/team">Our Team</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/feedback">Feedback</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart"><i style="font-size:30px;" class="fa fa-cart-plus"></i>
+            <div style="font-size:10px;" class="badge bg-danger">{{totalItem}}</div>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+
+
+
+<footer class=" text-center text-lg-start" style="background-color: #282c34">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase text-white">Company name</h5>
+        <p>
+          <img src="assets/logo.png" width="160px"/>
+        </p>
+       
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
+        <h5 class="text-uppercase mb-0 text-white"> Products</h5>
+
+        <ul class="list-unstyled text-white">
+          <li>
+            
+              <a routerLink="/men" class="text-reset nav-link text-center text-white ">Men Fashion</a>
+            
+          </li>
+          <li>
+            
+              <a  routerLink="/womenproduct" class="text-reset nav-link text-center text-white ">WESTERN WEAR</a>
+          
+          </li>
+          <li>
+          
+              <a routerLink="/fusionWear" class="text-reset nav-link text-center text-white ">INDIAN & FUSION WEAR</a>
+          
+          </li>
+          <li>
+          
+              <a  routerLink="/sleepWear" class="text-reset nav-link text-center text-white  ">LOUNGEWEAR & SLEEPWEAR</a>
+          
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
+        <h5 class="text-uppercase text-white ">Contact Us</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <p class="text-white"><i class="fa fa-home me-3 text-center text-white "></i>Uttar Pradesh,Aligarh</p>
+            <p>
+          </li>
+          <li>
+            <p class="text-white">
+              <i class="fa fa-envelope me-3 text-center text-white "></i>
+              harshita@gamil.com
+            </p>
+          </li>
+          <li>
+            <p class="text-white"><i class="fa fa-phone me-3 text-center text-white "></i>91 + 01 333 768 67</p>
+          </li>
+          <li>
+            <p class="text-white"><i class="fa fa-print me-3 text-center text-white "></i>00 + 02 564 896 99</p>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
+        <h5 class="text-uppercase mb-0 text-white ">Follow Us</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+          <a href="https://www.facebook.com" class="me-4 text-reset text-center">
+            <i class="fa fa-facebook-f text-white "></i>
+          </a>
+          </p>
+          </li>
+          <li>
+            <p>
+          <a href="https://www.twitter.com" class="me-4 text-reset text-center">
+            <i class="fa fa-twitter text-white "></i>
+          </a>
+          </p>
+          </li>
+          <li>
+            <p>
+            <a href="https://www.linkedin.com" class="me-4 text-reset text-center">
+              <i class="fa fa-linkedin text-white "></i>
+            </a>
+            </p>
+          </li>
+          <li>
+            <p>
+            <a href="https://www.instagram.com" class="me-4 text-reset text-center">
+              <i class="fa fa-instagram text-white  "></i>
+            </a>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3 text-white " style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">HarshitaSingh</a>
+  </div>
+  <!-- Copyright -->
+</footer>

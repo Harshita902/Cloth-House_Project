@@ -1,0 +1,90 @@
+<div class="bg-img">
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <h1>Contact Us</h1>
+        </div>
+
+    </div> 
+    <div class="row">
+        <div class="col">
+            <h1> <i class="fa fa-map-marker mt-5" aria-hidden="true">Address</i></h1>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aligarh</p>
+            <h1><i class="fa fa-phone mt-5" aria-hidden="true">Phone</i></h1>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50856489</p>
+            <h1><i class="fa fa-envelope-o mt-5" aria-hidden="true">Email</i></h1>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1234@gmail.com</p>    
+        </div>
+
+        <div class="col">
+            <form [formGroup]="contactform" (ngSubmit)="submit()">
+                <div class="row col-md-12">
+                 <div class="form-group col-md-10">
+                   <label for="firstname" class="col-form-label">First Name</label>
+                   <input type="text" formControlName="firstname" class="form-control">
+                    <div *ngIf="contactform.controls['firstname'].touched && contactform.controls['firstname'].invalid">
+                      <div *ngIf="contactform.controls['firstname'].errors?.['required']" class="text-danger">
+                        First name is required
+                      </div>
+                      <div *ngIf="contactform.controls['firstname'].errors?.['pattern']" class="text-danger">
+                        First name can have only alphabets and capital
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="form-group col-md-10">
+                   <label for="lastname" class="col-form-label">Last Name</label>
+                   <input type="text" formControlName="lastname" class="form-control" id="lastname">
+                   <div *ngIf="contactform.controls['lastname'].touched && contactform.controls['lastname'].invalid">
+                    <div *ngIf="contactform.controls['lastname'].errors?.['required']" class="text-danger">
+                      Last name is required
+                    </div>
+                    <div *ngIf="contactform.controls['lastname'].errors?.['pattern']" class="text-danger">
+                      last name can have only alphabets
+                    </div>
+                  </div>
+                 </div> 
+                 <div class="form-group col-md-10">
+                   <label for="phone" class="col-form-label">Phone Number</label>
+                   <input type="text" formControlName="phone" class="form-control" id="phone">
+                   <div *ngIf="contactform.controls['phone'].touched && contactform.controls['phone'].invalid">
+                    <div *ngIf="contactform.controls['phone'].errors?.['required']" class="text-danger">
+                      Phone is required
+                    </div>
+                    <div *ngIf="contactform.controls['phone'].errors?.['minlength'] || contactform.controls['phone'].errors?.['maxlength']" class="text-danger">
+                      Only 10 digits are
+                    </div>
+                  </div>
+                 </div>
+                 <div class="form-group col-md-10">
+                   <label for="email" class="col-form-label">Email</label>
+                   <input type="text" formControlName="email"  class="form-control" id="email">
+                   <div *ngIf="contactform.controls['email'].touched && contactform.controls['email'].invalid">
+                    <div *ngIf="contactform.controls['email'].errors?.['required']" class="text-danger">
+                      Email id is required
+                    </div>
+                    <div *ngIf="contactform.controls['email'].errors?.['pattern']" class="text-danger">
+                      Invalid email id
+                    </div>
+                  </div>
+                 </div>
+                 <div class="form-group col-md-10">
+                  <label for="password" class="col-form-label">Password</label>
+                  <input type="text" formControlName="password"  class="form-control" id="password">
+                  <div *ngIf="contactform.controls['password'].touched && contactform.controls['password'].invalid">
+                   <div *ngIf="contactform.controls['password'].errors?.['required']" class="text-danger">
+                     Password is required
+                   </div>
+                   <div *ngIf="contactform.controls['password'].errors?.['pattern']" class="text-danger">
+                     valid password
+                  </div>
+                 </div>
+                </div>
+                <div class="form-group col-md-10 my-2">
+                  <button class="btn btn-danger">Submit</button>
+                </div>
+                </div>
+                </form>
+        </div>
+    </div>
+</div>
+</div>
